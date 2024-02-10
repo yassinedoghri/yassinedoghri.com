@@ -1,0 +1,83 @@
+---
+import { Image } from "astro:assets";
+import "../assets/styles/fonts.css";
+import yassineBaganImage from "../assets/images/yassine-doghri-bagan_square.jpg";
+import { Icon } from "astro-icon/components";
+---
+
+<html lang="en" class="min-h-screen">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Yassine Doghri</title>
+  </head>
+  <body class="min-h-screen gap-8 flex flex-col items-center justify-center">
+    <div class="flex">
+      <Image
+        class="rounded-lg"
+        src={yassineBaganImage}
+        alt="Yassine Doghri looking at a temple in Bagan, Myanmar."
+        width={320}
+      />
+      <div class="flex flex-col text-2xl -mr-10">
+        <a
+          href="https://github.com/yassinedoghri"
+          title="Follow me on Github"
+          class="text-gray-500 hover:text-black p-2"
+        >
+          <Icon name="ri:github-fill" />
+        </a>
+        <a
+          href="https://twitter.com/yassinedoghri"
+          title="Follow me on Twitter / X"
+          class="text-gray-500 hover:text-black p-2"
+        >
+          <Icon name="ri:twitter-x-fill" />
+        </a>
+        <a
+          href="https://fosstodon.org/@yassinedoghri"
+          title="Follow me on the Fediverse"
+          class="text-gray-500 hover:text-black p-2"
+        >
+          <Icon name="ri:mastodon-fill" />
+        </a>
+        <a
+          href="https://linkedin.com/in/yassinedoghri"
+          title="Connect with me on Linkedin"
+          class="text-gray-500 hover:text-black p-2"
+        >
+          <Icon name="ri:linkedin-fill" />
+        </a>
+      </div>
+    </div>
+    <div class="flex flex-col max-w-xs bg-transparent backdrop-blur-sm">
+      <h1 class="text-4xl font-bold font-display">
+        👋 I'm Yassine, <br />a web developer.
+      </h1>
+      <p class="max-w-[50ch] text-xl mt-2">
+        I help in bringing your ideas to the browser. From design to
+        development, the whole shebang!
+      </p>
+      <a
+        href="mailto:yassine@doghri.fr"
+        class="transition flex justify-between shadow-lg hover:shadow-md hover:shadow-teal-500/30 shadow-teal-500/40 py-3 px-5 bg-gradient-to-b from-teal-50 to-teal-200 rounded-full font-bold text-teal-900 border-b-2 border-t-2 border-t-white border-b-teal-400 focus:ring-2 mt-2"
+      >
+        Contact me <Icon
+          name="ri:mail-send-fill"
+          class="text-xl text-teal-500/75"
+        />
+      </a>
+      <p class="flex items-center justify-center gap-2 mt-2">
+        <span class="relative flex h-2 w-2">
+          <span
+            class="h-2 w-2 absolute bg-red-400/75 block rounded-full animate-ping"
+          ></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"
+          ></span>
+        </span>Currently not available for hire.
+      </p>
+    </div>
+  </body>
+</html>
